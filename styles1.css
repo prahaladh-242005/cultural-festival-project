@@ -1,0 +1,75 @@
+/*          SVG.     */
+svg path {
+  fill: #008080;/* Default fill color */
+  stroke: #d3d3d3; /* Border color */
+  stroke-width: 1;
+}
+svg path:hover {
+  fill: #ff00ff; /* Highlighted fill color on hover */
+  transition: fill 0.3s ease;
+}
+/* Reset some default styles for better consistency across browsers */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the content */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Container to provide a target for the hover effect */
+.hover-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Define styles for the default state */
+.hover {
+  color: #333; /* Set the default text color */
+  background-color: #fff; /* Set the default background color */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s; /* Add smooth transition effect */
+}
+#map-container {
+  position: relative;
+}
+
+/* Style for the holographic projection effect */
+.state-hover {
+  fill: transparent;
+  stroke: #00f; /* Blue color for the holographic projection */
+  stroke-width: 2;
+  transition: fill 0.3s, stroke 0.3s;
+}
+button{
+	width:200px;
+	padding: 15px 0;
+	text-align:center;
+	background: transparent;
+	color:#fff;
+	cursor: pointer;
+	margin: 20px 10px;
+	border-radius: 25px;
+	border: 2px solid yellow;
+}
+button:hover{
+	border:2px solid #f44336;
+	background: #f44336;
+	transition: 1s;
+}
+#indianMap path {
+  fill: #ccc; /* Default fill color for states */
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <title>Month Data Display</title>
+    <style>
+        #data-container {
+            margin-top: 20px;
+            flex-direction:column;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-size: 100% 100%;
+            background-position: center;
+            height: 1000px;
+            position: relative; /* Set an appropriate height for the container */
+        }
+        #image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="showData('a')" class="styled-button">Tirumala Tirupati Brahmotsavam</button>
+<button onclick="showData('b')" class ="styled-button">Ankamma Thalli Jathara</button>
+
+<div id="data-container">
+    <div id="image-overlay"></div>
+    <!-- Content will be dynamically updated here -->
+</div>
+
+<script>
+    function showData(month) {
+        var dataContainer = document.getElementById('data-container');
+        var imageOverlay = document.getElementById('image-overlay');
+
+        // Replace this with the actual data for each month
+        var monthData = {
+            'a': {
+                backgroundImage: 'url(https://i.imghippo.com/files/0WUiQ1706889906.pdf)',
+                text: 'Tirupati Tirumala Brahmotsavam',
+            },
+            'b': {
+                text: 'Ankamma Thalli Jathara',
+                backgroundImage: 'url(https://i.imghippo.com/files/B8dfk1706890889.pdf)'
+            }
+        };
+        // Update the content and background image based on the selected month
+        imageOverlay.textContent = monthData[month].text;
+        dataContainer.style.backgroundImage = monthData[month].backgroundImage;
+    }
+</script>
+
+</body>
+</html>
